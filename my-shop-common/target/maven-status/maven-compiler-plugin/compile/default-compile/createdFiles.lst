@@ -1,0 +1,13 @@
+com\black\myshop\utils\PattenUtil.class
+com\black\myshop\interceptor\LoginInterceptor.class
+com\black\myshop\service\BaseService.class
+com\black\myshop\service\impl\BaseServiceImpl.class
+com\black\myshop\utils\HttpClientUtils.class
+com\black\myshop\test\BaseResult.class
+com\black\myshop\entity\PageResult.class
+com\black\myshop\entity\Result.class
+com\black\myshop\utils\BeanValidator.class
+com\black\myshop\dao\BaseDao.class
+com\black\myshop\entity\BaseEntity.class
+com\black\myshop\webSupport\PageTag.class
+com\black\myshop\controller\BaseController.class

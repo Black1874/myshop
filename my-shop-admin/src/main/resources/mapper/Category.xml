@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.black.myshop.dao.CategoryDao">
+    <sql id="categoryColumns">
+        a.id as "id",
+        a. name as "name",
+        a.parent_Id as "parent.id",
+        b.name as "parent.name",
+        a.status as "status",
+        a.sort_order as "order",
+        a.is_parent as isParent,
+        a.created,
+        a.updated
+    </sql>
+
+    <select id="queryPage" resultType="com.black.myshop.entity.Category" parameterType="com.black.myshop.entity.Category">
+        select <include refid="categoryColumns"></include> from tb_content_category a left Join tb_content_category b
+        on a.parent_id = b.id
+        where 1=1
+        <if test="name !=null and name!=''">
+            and  a.name like concat("%",#{name},"%")
+        </if>
+        limit #{pageResult.start},#{pageResult.pageSize}
+    </select>
+
+    <select id="getTreeTable" resultType="com.black.myshop.entity.Category">
+        select <include refid="categoryColumns"></include> from tb_content_category a left Join tb_content_category b
+        on a.parent_id = b.id
+        where 1=1
+        <if test="name !=null and name!=''">
+            and  a.name like concat("%",#{name},"%")
+        </if>
+        order by a.sort_order
+    </select>
+
+
+
+    <select id="getCount" resultType="java.lang.Integer">
+        select count(*) from  tb_content_category;
+    </select>
+
+    <delete id="delete" parameterType="com.black.myshop.entity.Category">
+        delete from tb_content_category where id=${id}
+    </delete>
+
+    <insert id="save" parameterType="com.black.myshop.entity.Category">
+        insert into tb_content_category(name,parent_id,status,sort_order,is_parent,created,updated) values (#{name},#{parent.id},#{status},#{order},#{isParent},#{created},#{updated})
+    </insert>
+
+    <update id="update" parameterType="com.black.myshop.entity.Category">
+        update tb_content_category set name=#{name},parent_id=#{parent.id},name=#{name},status=#{status},sort_order=#{order},is_parent=#{isParent},updated=#{updated} where id=#{id}
+    </update>
+
+    <select id="getById" resultType="com.black.myshop.entity.Category">
+        select <include refid="categoryColumns"></include> from tb_content_category a left join tb_content_category b on a.parent_id = b.id where a.id=#{id}
+    </select>
+
+    <select id="getChildren" resultType="com.black.myshop.entity.Category">
+        select <include refid="categoryColumns"></include> from tb_content_category a left join tb_content_category b  on a.parent_id = b.id where a.parent_id=#{id}
+    </select>
+
+    <update id="setIsParentTrue">
+        update tb_content_category set  is_parent= 1 where id=#{id}
+    </update>
+
+    <update id="setIsParentFalse">
+        update tb_content_category set is_parent = 0 where id=#{id}
+    </update>
+
+</mapper>

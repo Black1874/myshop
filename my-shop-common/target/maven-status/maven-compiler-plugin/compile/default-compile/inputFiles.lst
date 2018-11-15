@@ -1,0 +1,13 @@
+E:\Code\GitLab\myshop\my-shop-common\src\main\java\com\black\myshop\entity\BaseEntity.java
+E:\Code\GitLab\myshop\my-shop-common\src\main\java\com\black\myshop\controller\BaseController.java
+E:\Code\GitLab\myshop\my-shop-common\src\main\java\com\black\myshop\webSupport\PageTag.java
+E:\Code\GitLab\myshop\my-shop-common\src\main\java\com\black\myshop\utils\BeanValidator.java
+E:\Code\GitLab\myshop\my-shop-common\src\main\java\com\black\myshop\utils\HttpClientUtils.java
+E:\Code\GitLab\myshop\my-shop-common\src\main\java\com\black\myshop\test\BaseResult.java
+E:\Code\GitLab\myshop\my-shop-common\src\main\java\com\black\myshop\dao\BaseDao.java
+E:\Code\GitLab\myshop\my-shop-common\src\main\java\com\black\myshop\entity\PageResult.java
+E:\Code\GitLab\myshop\my-shop-common\src\main\java\com\black\myshop\entity\Result.java
+E:\Code\GitLab\myshop\my-shop-common\src\main\java\com\black\myshop\service\impl\BaseServiceImpl.java
+E:\Code\GitLab\myshop\my-shop-common\src\main\java\com\black\myshop\service\BaseService.java
+E:\Code\GitLab\myshop\my-shop-common\src\main\java\com\black\myshop\interceptor\LoginInterceptor.java
+E:\Code\GitLab\myshop\my-shop-common\src\main\java\com\black\myshop\utils\PattenUtil.java

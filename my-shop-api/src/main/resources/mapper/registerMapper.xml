@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.black.myshop.dao.RegisterAPIDao">
+    <sql id="userColumns">
+        id as "id",
+        username as "username",
+        password as "password",
+        phone as "phone",
+        email as "email",
+        created as "created",
+        updated as "updated"
+    </sql>
+
+    <select id="query" resultType="java.lang.Integer">
+        select count(*) from tb_user where
+        <if test="username!=null and ''!=username">
+        username=#{username}
+        </if>
+
+        <if test="phone!=null and ''!=phone">
+            phone=#{phone}
+        </if>
+
+        <if test="email!=null and ''!=email ">
+            email=#{email}
+        </if>
+    </select>
+
+    <insert id="insert">
+        insert into tb_user(username,password,phone,email,created,updated) values(#{username},#{password},#{phone},#{email},#{created},#{updated})
+    </insert>
+
+</mapper>

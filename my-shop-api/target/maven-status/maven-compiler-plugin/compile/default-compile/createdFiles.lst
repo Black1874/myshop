@@ -1,0 +1,12 @@
+com\black\myshop\service\FrontLoginService.class
+com\black\myshop\dao\FrontLoginDao.class
+com\black\myshop\controller\RegisterAPIController.class
+com\black\myshop\service\impl\RegisterAPIServiceImpl.class
+com\black\myshop\service\RegisterAPIService.class
+com\black\myshop\service\impl\FrontLoginServiceImpl.class
+com\black\myshop\controller\HomeDataAPIController.class
+com\black\myshop\service\SlideShowAPIService.class
+com\black\myshop\service\impl\SlideShowAPIServiceImpl.class
+com\black\myshop\dao\SlideShowAPIDao.class
+com\black\myshop\controller\FrontLoginController.class
+com\black\myshop\dao\RegisterAPIDao.class

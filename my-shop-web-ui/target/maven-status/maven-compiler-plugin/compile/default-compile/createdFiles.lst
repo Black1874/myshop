@@ -1,0 +1,11 @@
+com\black\myshop\service\SlideShowWebUIService.class
+com\black\myshop\controller\RegisterWebUIController.class
+com\black\myshop\controller\HomeDataWebUIController.class
+com\black\myshop\utils\EmailConfig.class
+com\black\myshop\controller\KaptchaWebUIController.class
+com\black\myshop\service\impl\SlideShowWebUIServiceImpl.class
+com\black\myshop\service\LoginFrontService.class
+com\black\myshop\controller\LoginFrontController.class
+com\black\myshop\service\RegisterWebUIService.class
+com\black\myshop\service\impl\LoginFrontServiceImpl.class
+com\black\myshop\service\impl\RegisterWebUIServiceImpl.class
